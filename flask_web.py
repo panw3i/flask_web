@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import abort, redirect
+from flask import url_for
 
 app = Flask(__name__)
 
@@ -60,6 +61,12 @@ def school():
 @app.route('/get_method',methods=['get'])
 def get_method():
     return 'use get method'
+
+
+@app.route('/get_url')
+def get_url():
+    return url_for(get_method)
+
 
 
 if __name__ == "__main__":
