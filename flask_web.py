@@ -20,7 +20,7 @@ def f_check():
     abort(404)
 
 
-# doing somting here
+# 多个路由可以指定同一处理函数
 
 @app.route('/hello')
 @app.route('/hello/<name>')
