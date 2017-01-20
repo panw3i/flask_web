@@ -15,5 +15,15 @@ def user_index():
     user = User(1, "pan")
     return render_template("user_index.html",user=user)
 
+
+@app.route('/userlist')
+def user_list():
+    users = []
+    for i in range(10):
+        user = User(i,"pan")
+        users.append(user)
+
+    return render_template("user_list.html",users=users)
+
 if __name__ == '__main__':
     app.run()
